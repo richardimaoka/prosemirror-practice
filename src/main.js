@@ -3,8 +3,18 @@ import { EditorState } from "prosemirror-state";
 import { EditorView } from "prosemirror-view";
 
 const schema = new Schema({
-  nodes: { doc: { content: "text*" }, text: {} },
+  nodes: {
+    doc: {
+      content: "paragraph+",
+    },
+    paragraph: {
+      content: "text*",
+      toDOM() {
+        return ["h1", 0];
+      },
+    },
+    text: {},
+  },
 });
 const state = EditorState.create({ schema });
-
 new EditorView(document.getElementById("app"), { state });
