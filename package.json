@@ -12,7 +12,10 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
+    "prosemirror-example-setup": "^1.2.3",
     "prosemirror-model": "^1.24.1",
+    "prosemirror-schema-basic": "^1.2.3",
+    "prosemirror-schema-list": "^1.5.1",
     "prosemirror-state": "^1.4.3",
     "prosemirror-view": "^1.38.1"
   }
